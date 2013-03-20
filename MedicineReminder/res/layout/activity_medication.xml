@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:layout_x="0dp"
+        android:layout_y="169dp"
+        android:text="@string/whenmeds"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:layout_x="1dp"
+        android:layout_y="10dp"
+        android:text="@string/whatmeds"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/button1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="78dp"
+        android:layout_height="32dp"
+        android:layout_x="241dp"
+        android:layout_y="6dp"
+        android:text="Add" />
+
+    <Button
+        android:id="@+id/Button01"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="78dp"
+        android:layout_height="32dp"
+        android:layout_x="242dp"
+        android:layout_y="164dp"
+        android:text="Add" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="23dp"
+        android:layout_y="209dp"
+        android:ems="10"
+        android:inputType="time"
+        android:text="12:00" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="23dp"
+        android:layout_y="257dp"
+        android:ems="10"
+        android:inputType="time"
+        android:text="3:00" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="22dp"
+        android:layout_y="39dp"
+        android:ems="10"
+        android:text="Combivir" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="23dp"
+        android:layout_y="85dp"
+        android:ems="10"
+        android:text="Emtriva" />
+
+    <Button
+        android:id="@+id/button2"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="90dp"
+        android:layout_height="33dp"
+        android:layout_x="32dp"
+        android:layout_y="126dp"
+        android:text="Clear" />
+
+    <Button
+        android:id="@+id/Button02"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="90dp"
+        android:layout_height="33dp"
+        android:layout_x="31dp"
+        android:layout_y="298dp"
+        android:text="Clear" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="2dp"
+        android:layout_y="376dp"
+        android:text="Continue"
+        android:onClick="onMContinueButtonClick" />
+
+</AbsoluteLayout>
