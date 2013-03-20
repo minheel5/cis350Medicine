@@ -32,6 +32,7 @@
         android:maxHeight="200dp"
         android:maxWidth="200dp"
         android:scaleType="fitCenter"
+        android:onClick="onAvatarImage1ButtonClick"
         android:src="@drawable/avatar1" />
 
     <ImageButton
@@ -43,6 +44,7 @@
         android:maxHeight="200dp"
         android:maxWidth="200dp"
         android:scaleType="fitCenter"
+        android:onClick="onAvatarImage2ButtonClick"
         android:src="@drawable/avatar2" />
 
     <ImageButton
@@ -54,6 +56,7 @@
         android:maxHeight="200dp"
         android:maxWidth="200dp"
         android:scaleType="fitCenter"
+        android:onClick="onAvatarImage3ButtonClick"
         android:src="@drawable/avatar3" />
 
     <ImageButton
@@ -66,6 +69,7 @@
         android:maxHeight="200dp"
         android:maxWidth="200dp"
         android:scaleType="fitCenter"
+        android:onClick="onAvatarImage4ButtonClick"
         android:src="@drawable/avatar4" />
 
     <ImageButton
@@ -77,6 +81,7 @@
         android:maxHeight="200dp"
         android:maxWidth="200dp"
         android:scaleType="fitCenter"
+        android:onClick="onAvatarImage5ButtonClick"
         android:src="@drawable/avatar5" />
 
     <ImageButton
@@ -88,6 +93,7 @@
         android:maxHeight="200dp"
         android:maxWidth="200dp"
         android:scaleType="fitCenter"
+        android:onClick="onAvatarImage6ButtonClick"
         android:src="@drawable/avatar6" />
 
     <ImageButton
@@ -100,6 +106,7 @@
         android:maxHeight="200dp"
         android:maxWidth="200dp"
         android:scaleType="fitCenter"
+        android:onClick="onAvatarImage7ButtonClick"
         android:src="@drawable/avatar7" />
 
     <ImageButton
@@ -111,6 +118,7 @@
         android:maxHeight="200dp"
         android:maxWidth="200dp"
         android:scaleType="fitCenter"
+        android:onClick="onAvatarImage8ButtonClick"
         android:src="@drawable/avatar8" />
 
     <ImageButton
@@ -122,6 +130,7 @@
         android:maxHeight="200dp"
         android:maxWidth="200dp"
         android:scaleType="fitCenter"
+        android:onClick="onAvatarImage9ButtonClick"
         android:src="@drawable/avatar9" />
 
     <Button
