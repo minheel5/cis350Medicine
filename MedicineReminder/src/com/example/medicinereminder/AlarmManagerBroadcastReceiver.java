@@ -18,6 +18,7 @@ public class AlarmManagerBroadcastReceiver extends BroadcastReceiver {
 
  final public static String ONE_TIME = "onetime";
 
+ 
  @Override
  public void onReceive(Context context, Intent intent) {
    PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
