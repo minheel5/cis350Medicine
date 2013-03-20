@@ -84,9 +84,10 @@ public final class R {
         public static final int activity_reminder_time=0x7f030004;
         public static final int activity_set_refills=0x7f030005;
         public static final int activity_set_reminder=0x7f030006;
-        public static final int activity_take_option=0x7f030007;
-        public static final int activity_tutorial=0x7f030008;
-        public static final int activity_user_info=0x7f030009;
+        public static final int activity_snooze=0x7f030007;
+        public static final int activity_take_option=0x7f030008;
+        public static final int activity_tutorial=0x7f030009;
+        public static final int activity_user_info=0x7f03000a;
     }
     public static final class menu {
         public static final int activity_appointments=0x7f070000;
@@ -96,9 +97,10 @@ public final class R {
         public static final int activity_reminder_time=0x7f070004;
         public static final int activity_set_refills=0x7f070005;
         public static final int activity_set_reminder=0x7f070006;
-        public static final int activity_take_option=0x7f070007;
-        public static final int activity_tutorial=0x7f070008;
-        public static final int activity_user_info=0x7f070009;
+        public static final int activity_snooze=0x7f070007;
+        public static final int activity_take_option=0x7f070008;
+        public static final int activity_tutorial=0x7f070009;
+        public static final int activity_user_info=0x7f07000a;
     }
     public static final class string {
         public static final int MEDCHECK=0x7f050005;
@@ -123,6 +125,7 @@ public final class R {
         public static final int reminders=0x7f050013;
         public static final int remindertime=0x7f05001a;
         public static final int snooze=0x7f050018;
+        public static final int snooze2=0x7f05001b;
         public static final int takeoption=0x7f05000f;
         public static final int took=0x7f050016;
         public static final int using=0x7f050007;

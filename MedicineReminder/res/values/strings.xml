@@ -28,5 +28,6 @@
 	<string name="snooze">Snooze</string>
 	<string name="pillcam">PillCam</string>
 	<string name="remindertime">What time do you want to be reminded?</string>
+	<string name="snooze2">How long do you want to snooze for?</string>
     
 </resources>
