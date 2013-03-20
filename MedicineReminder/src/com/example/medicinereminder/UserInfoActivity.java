@@ -65,6 +65,18 @@ public class UserInfoActivity extends Activity {
 		else if (last_name.equals("")){
 			new AlertDialog.Builder(this).setTitle("Error").setMessage("You cannot leave any fields blank").setNeutralButton("close",null).show();
 		}
+		else if (dateOfDiagnosis.equals("")){
+			new AlertDialog.Builder(this).setTitle("Error").setMessage("You cannot leave any fields blank").setNeutralButton("close",null).show();
+		}
+		else if (viralLoad.equals("")){
+			new AlertDialog.Builder(this).setTitle("Error").setMessage("You cannot leave any fields blank").setNeutralButton("close",null).show();
+		}
+		else if (phone.equals("")){
+			new AlertDialog.Builder(this).setTitle("Error").setMessage("You cannot leave any fields blank").setNeutralButton("close",null).show();
+		}
+		else if (providerPhone.equals("")){
+			new AlertDialog.Builder(this).setTitle("Error").setMessage("You cannot leave any fields blank").setNeutralButton("close",null).show();
+		}
 		else{
 			Intent i = new Intent(this, MedicationActivity.class);
 			startActivityForResult(i, MedicationActivity_ID);

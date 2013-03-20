@@ -10,8 +10,8 @@ import android.widget.EditText;
 
 public class MedicationActivity extends Activity {
 	public static final int ReminderTimeActivity_ID = 1;
-	private String medication = "";
-	private String time = "";
+	private String[] medication = {"",""};
+	private String[] time = {"",""};
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,20 +28,20 @@ public class MedicationActivity extends Activity {
 	
 	public void onMContinueButtonClick(View view){
 		EditText e1 = (EditText)findViewById(R.id.editText3);
-		medication = e1.getText().toString();
-		Log.i("Info", medication);
+		medication[0] = e1.getText().toString();
+		Log.i("Info", medication[0]);
 		
 		EditText e2 = (EditText)findViewById(R.id.editText4);
-		medication = e2.getText().toString();
-		Log.i("Info", medication);
+		medication[1] = e2.getText().toString();
+		Log.i("Info", medication[1]);
 		
 		EditText e3 = (EditText)findViewById(R.id.editText1);
-		time = e3.getText().toString();
-		Log.i("Info", time);
+		time[0] = e3.getText().toString();
+		Log.i("Info", time[0]);
 		
 		EditText e4 = (EditText)findViewById(R.id.editText2);
-		time = e4.getText().toString();
-		Log.i("Info", time);
+		time[1] = e4.getText().toString();
+		Log.i("Info", time[1]);
 		
 		Intent i = new Intent(this, ReminderTimeActivity.class);
 		startActivityForResult(i, ReminderTimeActivity_ID);
