@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="MEDCheck"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/red"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="mobile" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="108dp"
+        android:onClick="onEditInformationClick"
+        android:text="Edit Information" />
+
+    <Button
+        android:id="@+id/Button02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Button01"
+        android:onClick="onCheckProgressClick"
+        android:text="Check Progress" />
+
+    <Button
+        android:id="@+id/Button01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/button1"
+        android:layout_marginTop="51dp"
+        android:onClick="onTakeMedsClick"
+        android:text="Take Meds" />
+
+</RelativeLayout>

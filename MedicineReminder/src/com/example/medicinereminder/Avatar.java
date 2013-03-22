@@ -61,6 +61,10 @@ public class Avatar extends Activity {
 		imagenumber = 9;
 	}
 	
+	public int getImage(){
+		return imagenumber;
+	}
+	
 	public void onAvatarContinueButtonClick(View view){
 		if (imagenumber == 0){
 			new AlertDialog.Builder(this).setTitle("Error").setMessage("Please select an avatar").setNeutralButton("close",null).show();
