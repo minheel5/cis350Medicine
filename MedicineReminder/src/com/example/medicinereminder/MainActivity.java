@@ -10,10 +10,21 @@ import android.view.View;
 
 public class MainActivity extends Activity {
 	public static final int UserInfoActivity_ID = 1;
+	private SharedPreferences mPreferences;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		boolean firstTime = mPreferences.getBoolean("firstTime", true);
+		if (firstTime){
+			SharedPreferences.Editor editor = mPreferences.edit();
+			editor.putBoolean("firstTime", false);
+			editor.commit();
+			super.onCreate(savedInstanceState);
+			setContentView(R.layout.activity_main);
+		}
+		else 
+			super.onCreate(savedInstanceState);
+			setContentView(R.layout.activity_home_screen);
 	}
 
 	@Override
