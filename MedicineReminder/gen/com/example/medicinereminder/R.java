@@ -110,16 +110,23 @@ public final class R {
         public static final int appointments=0x7f050012;
         public static final int basicinfo=0x7f050011;
         public static final int click=0x7f050009;
+        public static final int conti=0x7f050022;
+        public static final int dateOfDiagnosis=0x7f05001e;
         public static final int edit=0x7f050010;
         public static final int editmenu=0x7f05000e;
+        public static final int firstName=0x7f05001c;
         public static final int gain=0x7f050008;
         public static final int hello_world=0x7f050001;
         public static final int home=0x7f05000d;
+        public static final int info=0x7f050023;
+        public static final int lastName=0x7f05001d;
         public static final int medications=0x7f050014;
         public static final int menu_settings=0x7f050002;
         public static final int mobile=0x7f050006;
         public static final int nottaken=0x7f050017;
+        public static final int phone=0x7f050020;
         public static final int pillcam=0x7f050019;
+        public static final int providerPhone=0x7f050021;
         public static final int refills=0x7f050015;
         public static final int reminder=0x7f05000a;
         public static final int reminders=0x7f050013;
@@ -129,6 +136,7 @@ public final class R {
         public static final int takeoption=0x7f05000f;
         public static final int took=0x7f050016;
         public static final int using=0x7f050007;
+        public static final int viralLoad=0x7f05001f;
         public static final int whatmeds=0x7f05000b;
         public static final int whenmeds=0x7f05000c;
     }

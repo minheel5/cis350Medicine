@@ -8,7 +8,7 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter Your Information:"
+        android:text="@string/info"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="First Name"
+        android:hint="@string/firstName"
         android:inputType="textPersonName" >
 
         <requestFocus />
@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Last Name"
+        android:hint="@string/lastName"
         android:inputType="textPersonName" />
 
     <EditText
@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Date Of Diagnosis"
+        android:hint="@string/dateOfDiagnosis"
         android:inputType="date" />
 
     <EditText
@@ -43,14 +43,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Viral Load" />
+        android:hint="@string/viralLoad" />
 
     <EditText
         android:id="@+id/editText5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Phone Number"
+        android:hint="@string/phone"
         android:inputType="phone" />
 
     <EditText
@@ -58,7 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Provider Number"
+        android:hint="@string/providerPhone"
         android:inputType="phone" />
 
     <Button
@@ -66,6 +66,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onContinueButtonClick"
-        android:text="Continue" />
+        android:text="@string/conti" />
 
 </LinearLayout>

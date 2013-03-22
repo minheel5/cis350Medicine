@@ -65,17 +65,17 @@ public class UserInfoActivity extends Activity {
 		else if (last_name.equals("")){
 			new AlertDialog.Builder(this).setTitle("Error").setMessage("You cannot leave any fields blank").setNeutralButton("close",null).show();
 		}
-		else if (dateOfDiagnosis.equals("")){
+		else if (dateOfDiagnosis.equals("") || dateOfDiagnosis.matches("[\\d]{2}/[\\d]{2}/[\\d]{4}")){
 			new AlertDialog.Builder(this).setTitle("Error").setMessage("You cannot leave any fields blank").setNeutralButton("close",null).show();
 		}
 		else if (viralLoad.equals("")){
 			new AlertDialog.Builder(this).setTitle("Error").setMessage("You cannot leave any fields blank").setNeutralButton("close",null).show();
 		}
-		else if (phone.equals("")){
-			new AlertDialog.Builder(this).setTitle("Error").setMessage("You cannot leave any fields blank").setNeutralButton("close",null).show();
+		else if (phone.equals("") || !phone.matches("(\\d{3}-?){1,2}\\d{4}")){
+			new AlertDialog.Builder(this).setTitle("Error").setMessage("Please enter a valid phone number").setNeutralButton("close",null).show();
 		}
-		else if (providerPhone.equals("")){
-			new AlertDialog.Builder(this).setTitle("Error").setMessage("You cannot leave any fields blank").setNeutralButton("close",null).show();
+		else if (providerPhone.equals("") || !providerPhone.matches("(\\d{3}-?){1,2}\\d{4}")){
+			new AlertDialog.Builder(this).setTitle("Error").setMessage("Please enter a valid provider phone number").setNeutralButton("close",null).show();
 		}
 		else{
 			Intent i = new Intent(this, MedicationActivity.class);
