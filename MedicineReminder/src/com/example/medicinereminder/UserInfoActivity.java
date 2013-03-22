@@ -1,10 +1,10 @@
 package com.example.medicinereminder;
 
 
-import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -66,7 +66,7 @@ public class UserInfoActivity extends Activity {
 			new AlertDialog.Builder(this).setTitle("Error").setMessage("You cannot leave any fields blank").setNeutralButton("close",null).show();
 		}
 		else if (dateOfDiagnosis.equals("") || dateOfDiagnosis.matches("[\\d]{2}/[\\d]{2}/[\\d]{4}")){
-			new AlertDialog.Builder(this).setTitle("Error").setMessage("You cannot leave any fields blank").setNeutralButton("close",null).show();
+			new AlertDialog.Builder(this).setTitle("Error").setMessage("Please enter a date of diagnosis").setNeutralButton("close",null).show();
 		}
 		else if (viralLoad.equals("")){
 			new AlertDialog.Builder(this).setTitle("Error").setMessage("You cannot leave any fields blank").setNeutralButton("close",null).show();
