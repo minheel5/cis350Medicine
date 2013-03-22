@@ -3,8 +3,10 @@ package com.example.medicinereminder;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.Menu;
 import android.view.View;
+
 
 public class MainActivity extends Activity {
 	public static final int UserInfoActivity_ID = 1;
