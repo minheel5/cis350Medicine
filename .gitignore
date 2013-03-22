@@ -192,3 +192,5 @@ proguard/
 *.ipr
 *.iws
 .idea/
+
+MedicineReminder/gen/com/example/medicinereminder/R.java
