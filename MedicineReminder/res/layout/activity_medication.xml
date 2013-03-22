@@ -41,28 +41,12 @@
         android:layout_y="164dp"
         android:text="Add" />
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="23dp"
-        android:layout_y="209dp"
-        android:ems="10"
-        android:inputType="time"
-        android:text="12:00" >
+    
 
         <requestFocus />
-    </EditText>
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="23dp"
-        android:layout_y="257dp"
-        android:ems="10"
-        android:inputType="time"
-        android:text="3:00" />
+  
+    
+    
 
     <EditText
         android:id="@+id/editText3"
