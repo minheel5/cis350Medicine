@@ -20,10 +20,7 @@ public class AppointmentsActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_appointments);
 		Button pickDate = (Button) findViewById(R.id.pickDate);
-        pickDate.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                showDialog(DATE_DIALOG_ID);
-            }
+        
 	}
 
 	@Override
