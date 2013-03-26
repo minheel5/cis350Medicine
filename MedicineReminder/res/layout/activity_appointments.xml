@@ -25,10 +25,11 @@
     
     </LinearLayout>
     
-    <DatePicker
-        android:id="@+id/datePicker1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    <Button android:id="@+id/pickDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dip"
+            android:text="pick date"/> 
     
     <Button android:id="@+id/clear"
         android:layout_width="wrap_content"
