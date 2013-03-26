@@ -65,7 +65,7 @@ public class UserInfoActivity extends Activity {
 		else if (last_name.equals("")){
 			new AlertDialog.Builder(this).setTitle("Error").setMessage("You cannot leave any fields blank").setNeutralButton("close",null).show();
 		}
-		else if (dateOfDiagnosis.equals("") || dateOfDiagnosis.matches("[\\d]{2}/[\\d]{2}/[\\d]{4}")){
+		else if (dateOfDiagnosis.equals("") || !dateOfDiagnosis.matches("[\\d]{2}/[\\d]{2}/[\\d]{4}")){
 			new AlertDialog.Builder(this).setTitle("Error").setMessage("Please enter a date of diagnosis").setNeutralButton("close",null).show();
 		}
 		else if (viralLoad.equals("")){
