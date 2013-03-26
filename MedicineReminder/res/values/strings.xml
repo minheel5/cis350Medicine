@@ -31,7 +31,7 @@
 	<string name="snooze2">How long do you want to snooze for?</string>
 	<string name="firstName">First Name</string>
 	<string name="lastName">Last Name</string>
-	<string name="dateOfDiagnosis">Date Of Diagnosis</string>
+	<string name="dateOfDiagnosis">Date Of Diagnosis (mm/dd/yyyy)</string>
 	<string name="viralLoad">Viral Load</string>
 	<string name="phone">Phone Number</string>
 	<string name="providerPhone">Provider\'s Phone Number</string>
