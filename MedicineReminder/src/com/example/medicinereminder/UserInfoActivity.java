@@ -19,6 +19,7 @@ public class UserInfoActivity extends Activity {
 	private String viralLoad = "";
 	private String phone = "";
 	private String providerPhone = "";
+	private Database data = Database.getInstance();
 	
 
 	@Override
@@ -38,10 +39,12 @@ public class UserInfoActivity extends Activity {
 		EditText e1 = (EditText)findViewById(R.id.editText1);
 		first_name = e1.getText().toString();
 		Log.i("Info", first_name);
+		data.firstName = first_name;
 		
 		EditText e2 = (EditText)findViewById(R.id.editText2);
 		last_name = e2.getText().toString();
 		Log.i("Info", last_name);
+		data.lastName = last_name;
 		
 		EditText e3 = (EditText)findViewById(R.id.editText3);
 		dateOfDiagnosis = e3.getText().toString();
