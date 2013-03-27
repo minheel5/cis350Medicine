@@ -2,7 +2,9 @@ package com.example.medicinereminder;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlarmManager;
 import android.app.Dialog;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
@@ -10,6 +12,7 @@ import java.util.Calendar;
 import android.app.DatePickerDialog;
 import android.widget.DatePicker; 
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 public class AppointmentsActivity extends Activity {
 	
@@ -28,6 +31,24 @@ public class AppointmentsActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_appointments);
+		
+		
+		
+		//this is where notification edits begin
+		Database database = Database.getInstance();
+		Calendar cal = Calendar.getInstance();
+		cal.set(Calendar.HOUR_OF_DAY, database.medicationTime1.getHour());
+		cal.set(Calendar.MINUTE, database.medicationTime1.getMinute());
+		cal.set(Calendar.SECOND, 05);
+		
+		Intent intent = new Intent(this, Mote.class);
+		PendingIntent pendingIntent = PendingIntent.getBroadcast(this.getApplicationContext(), 1253, intent, PendingIntent.FLAG_UPDATE_CURRENT| Intent.FILL_IN_DATA);
+		
+		AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+		
+		alarmManager.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pendingIntent);
+		Toast.makeText(this, "Alarm worked.", Toast.LENGTH_LONG).show();
+		//this is where notification edits end
         
 	}
 
@@ -38,6 +59,20 @@ public class AppointmentsActivity extends Activity {
 		return true;
 	}
 	
+<<<<<<< HEAD
+=======
+	public void onAContinueButtonClick(View view){
+		TimePicker d1 = (TimePicker)findViewById(R.id.timePicker2);
+		time = new Time(d1.getCurrentHour(),d1.getCurrentMinute());
+		data.appointmentsTime = time;
+		data.appointmentsYear = year;
+		data.appointmentsMonth = month;
+		data.appointmentsDay = day;
+		Intent i = new Intent(this, SetRefillsActivity.class);
+		startActivityForResult(i, SetRefillsActivity_ID);
+		
+	}
+>>>>>>> 85355fef255b1c14cffcb8ca257f38829ac9ba11
 	
 	// display current date
 		public void setCurrentDateOnView() {
