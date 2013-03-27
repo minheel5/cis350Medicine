@@ -7,11 +7,12 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TimePicker;
 
 public class MedicationActivity extends Activity {
 	public static final int ReminderTimeActivity_ID = 1;
-	private String[] medication = {"","","","",""};
-	private String[] time = {"",""};
+	private String[] medication = {"","",""};
+	private Time[] time = {null,null};
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -39,13 +40,13 @@ public class MedicationActivity extends Activity {
 		medication[2] = e3.getText().toString();
 		Log.i("Info", medication[2]);
 		
-		EditText e4 = (EditText)findViewById(R.id.editText4);
-		medication[3] = e4.getText().toString();
-		Log.i("Info", medication[3]);
+		TimePicker d1 = (TimePicker)findViewById(R.id.timePicker1);
+		time[0] = new Time(d1.getCurrentHour(),d1.getCurrentMinute());
+		Log.i("Info", time[0].toString());
 		
-		EditText e5 = (EditText)findViewById(R.id.editText5);
-		medication[4] = e5.getText().toString();
-		Log.i("Info", medication[4]);
+		TimePicker d2 = (TimePicker)findViewById(R.id.timePicker1);
+		time[1] = new Time(d2.getCurrentHour(),d2.getCurrentMinute());
+		Log.i("Info", time[1].toString());
 		
 		
 		Intent i = new Intent(this, ReminderTimeActivity.class);

@@ -33,28 +33,36 @@
          android:layout_height="wrap_content"
          android:hint="@string/med"
          android:ems="10" />
-     
-     <EditText
-         android:id="@+id/editText4"
-         android:layout_width="match_parent"
+
+     <TextView
+         android:id="@+id/textView2"
+         android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:hint="@string/med"
-         android:ems="10" />
-     
-     <EditText
-         android:id="@+id/editText5"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:hint="@string/med"
-         android:ems="10" />
+         android:text="@string/whenmeds"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     <TimePicker
+         android:id="@+id/timePicker1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content" />
+
+     <TimePicker
+         android:id="@+id/timePicker2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content" />
 
      <Button
          android:id="@+id/button1"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
+<<<<<<< HEAD
          android:layout_marginTop="100dp"
          android:text="@string/conti" 
          android:onClick="onMContinueButtonClick"
          />
+=======
+         android:onClick="onMContinueButtonClick"
+         android:text="@string/conti" />
+>>>>>>> cc87cd856522bc688567e3a220ce1d0e5adb666b
 
 </LinearLayout>
