@@ -19,6 +19,7 @@ public class Database {
 	protected int appointmentsYear = 0;
 	protected int appointmentsMonth = 0;
 	protected int appointmentsDay = 0;
+	protected int mins = 0;
 	protected Time appointmentsTime = null;
 	protected int refillYear = 0;
 	protected int refillMonth = 0;
