@@ -5,9 +5,7 @@ public class Database {
 	private static Database singletonInstance = null;
 	protected String firstName = ""; 
 	protected String lastName = "";
-<<<<<<< HEAD
 	protected int avatarnumber = 0;
-=======
 	protected String dateOfDiagnosis = "";
 	protected String viralLoad = "";
 	protected String phone = "";
@@ -22,8 +20,7 @@ public class Database {
 	protected int appointmentsMonth = 0;
 	protected int appointmentsDay = 0;
 	protected Time appointmentsTime = null;
->>>>>>> e69266c6d1c003934c09778259c43b866e36aaa7
-	
+
 	private Database(){
 		
 	}
