@@ -5,6 +5,7 @@ public class Database {
 	private static Database singletonInstance = null;
 	protected String firstName = ""; 
 	protected String lastName = "";
+	protected int avatarnumber = 0;
 	
 	private Database(){
 		

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class HomeScreen extends Activity {
@@ -16,17 +17,38 @@ public class HomeScreen extends Activity {
 	private String firstname;
 	private String lastname;
 	TextView welcome;
+	ImageView avatar;
+	private int avatarnumber;
 	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home_screen);
-	/*	firstname = data.firstName;
+		firstname = data.firstName;
 		lastname = data.lastName;
 		welcome = (TextView)findViewById(R.id.textView3);
 		welcome.setText("Welcome back, " + firstname + " " + lastname);
-		*/
+		avatar = (ImageView)findViewById(R.id.imageView1);
+		avatarnumber = data.avatarnumber;
+		if (avatarnumber == 1)
+			avatar.setImageDrawable(getResources().getDrawable(R.drawable.avatar1));
+		else if (avatarnumber == 2)
+			avatar.setImageDrawable(getResources().getDrawable(R.drawable.avatar2));
+		else if (avatarnumber == 3)
+			avatar.setImageDrawable(getResources().getDrawable(R.drawable.avatar3));
+		else if (avatarnumber == 4)
+			avatar.setImageDrawable(getResources().getDrawable(R.drawable.avatar4));
+		else if (avatarnumber == 5)
+			avatar.setImageDrawable(getResources().getDrawable(R.drawable.avatar5));
+		else if (avatarnumber == 6)
+			avatar.setImageDrawable(getResources().getDrawable(R.drawable.avatar6));
+		else if (avatarnumber == 7)
+			avatar.setImageDrawable(getResources().getDrawable(R.drawable.avatar7));
+		else if (avatarnumber == 8)
+			avatar.setImageDrawable(getResources().getDrawable(R.drawable.avatar8));
+		else if (avatarnumber == 9)
+			avatar.setImageDrawable(getResources().getDrawable(R.drawable.avatar9));
 	}
 
 	@Override

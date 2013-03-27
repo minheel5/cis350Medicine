@@ -12,6 +12,8 @@ import android.view.View;
 public class Avatar extends Activity {
 	public static final int Tutorial_ID = 1;
 	private int imagenumber = 0;
+	private Database data = Database.getInstance();
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -61,15 +63,13 @@ public class Avatar extends Activity {
 		imagenumber = 9;
 	}
 	
-	public int getImage(){
-		return imagenumber;
-	}
 	
 	public void onAvatarContinueButtonClick(View view){
 		if (imagenumber == 0){
 			new AlertDialog.Builder(this).setTitle("Error").setMessage("Please select an avatar").setNeutralButton("close",null).show();
 		}
 		else{
+		data.avatarnumber = imagenumber;
 		Intent i = new Intent(this, Tutorial.class);
 		startActivityForResult(i, Tutorial_ID);
 		}
