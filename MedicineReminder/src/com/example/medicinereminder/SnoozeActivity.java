@@ -2,6 +2,7 @@ package com.example.medicinereminder;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
@@ -9,10 +10,11 @@ import android.view.View;
 import android.widget.EditText;
 
 public class SnoozeActivity extends Activity {
-	/*
-	public static final int Appointments_ID = 1;
-	private String mes = "";
-	*/
+	
+	public static final int TakeOption_ID = 1;
+	private int mins = 0;
+	private Database data = Database.getInstance();
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -25,14 +27,22 @@ public class SnoozeActivity extends Activity {
 		getMenuInflater().inflate(R.menu.activity_snooze, menu);
 		return true;
 	}
-	/*
+	
 	public void onRMContinueButtonClick(View view){
-		EditText e1 = (EditText)findViewById(R.id.message);
-		mes = e1.getText().toString();
-		Log.i("Info", mes);
+		EditText time = (EditText)findViewById(R.id.editText2);
+		try {
+			mins = Integer.parseInt(time.getText().toString());
+		}
+		catch (Exception e){
+			new AlertDialog.Builder(this).setTitle("Error").setMessage("Please enter a number").setNeutralButton("close",null).show();
+			return;
+		}
 		
-		Intent i = new Intent(this, AppointmentsActivity.class);
-		startActivityForResult(i, Appointments_ID);
-	}*/
+		data.snoozeTime = mins;
+		
+		
+		Intent i = new Intent(this, TakeOption.class);
+		startActivityForResult(i, TakeOption_ID);
+	}
 
 }

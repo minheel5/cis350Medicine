@@ -8,7 +8,7 @@ import android.view.Menu;
 import android.view.View;
 
 public class TakeOption extends Activity {
-	public static final int ReminderTimeActivity2_ID = 1;
+	public static final int SnoozeActivity_ID = 1;
 	public static final int HomeScreen_ID = 1;
 	
 	@Override
@@ -42,8 +42,8 @@ public class TakeOption extends Activity {
 	}
 	
 	public void onAlarmButtonClick(View view){
-		Intent i = new Intent(this, ReminderTimeActivity2.class);
-		startActivityForResult(i, ReminderTimeActivity2_ID);
+		Intent i = new Intent(this, SnoozeActivity.class);
+		startActivityForResult(i, SnoozeActivity_ID);
 		
 	}
 }

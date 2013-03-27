@@ -23,6 +23,7 @@ public class Database {
 	protected int refillYear = 0;
 	protected int refillMonth = 0;
 	protected int refillDay = 0;
+	protected int snoozeTime = 0;
 
 	private Database(){
 		
