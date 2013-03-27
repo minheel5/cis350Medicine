@@ -5,6 +5,7 @@ import java.util.Calendar;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlarmManager;
+import android.app.AlertDialog;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
@@ -17,7 +18,6 @@ import android.widget.Toast;
 
 public class ReminderTimeActivity extends Activity {
 	public static int SetReminderActivity_ID = 1;
-	private int hour = 0;
 	private int mins = 0;
 	
 	
@@ -36,13 +36,16 @@ public class ReminderTimeActivity extends Activity {
 	}
 	
 	public void onRContinueButtonClick(View view){
-		TimePicker time = (TimePicker)findViewById(R.id.timePicker1);
-		time.clearFocus();
+		EditText time = (EditText)findViewById(R.id.editText1);
+		try {
+			mins = Integer.parseInt(time.getText().toString());
+		}
+		catch (Exception e){
+			new AlertDialog.Builder(this).setTitle("Error").setMessage("Please enter a number").setNeutralButton("close",null).show();
+			return;
+		}
 		
-		hour = time.getCurrentHour();
-		mins = time.getCurrentMinute();
-		
-		Log.i("Info", String.valueOf(hour) + " : " + String.valueOf(mins));
+		Log.i("Info", String.valueOf(mins));
 		
 		Intent i = new Intent(this, SetReminderActivity.class);
 		startActivityForResult(i, SetReminderActivity_ID);

@@ -2,6 +2,7 @@ package com.example.medicinereminder;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
@@ -39,6 +40,11 @@ public class MedicationActivity extends Activity {
 		EditText e3 = (EditText)findViewById(R.id.editText3);
 		medication[2] = e3.getText().toString();
 		Log.i("Info", medication[2]);
+		
+		if (medication[0].equals("") && medication[1].equals("") && medication[2].equals("")){
+			new AlertDialog.Builder(this).setTitle("Error").setMessage("Please enter a medication").setNeutralButton("close",null).show();
+			return;
+		}
 		
 		TimePicker d1 = (TimePicker)findViewById(R.id.timePicker1);
 		time[0] = new Time(d1.getCurrentHour(),d1.getCurrentMinute());
