@@ -49,6 +49,7 @@ public class HomeScreen extends Activity {
 			avatar.setImageDrawable(getResources().getDrawable(R.drawable.avatar8));
 		else if (avatarnumber == 9)
 			avatar.setImageDrawable(getResources().getDrawable(R.drawable.avatar9));
+		
 	}
 
 	@Override
