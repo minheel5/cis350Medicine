@@ -21,22 +21,6 @@ public class MainActivity extends Activity {
 			super.onCreate(savedInstanceState);
 			setContentView(R.layout.activity_main);
 			
-			Database database = Database.getInstance();
-			
-			//this is where notification edits begin
-			Calendar cal = Calendar.getInstance();
-			cal.set(Calendar.HOUR_OF_DAY, database.medicationTime1.getHour());
-			cal.set(Calendar.MINUTE, database.medicationTime1.getMinute());
-			cal.set(Calendar.SECOND, 05);
-			
-			Intent intent = new Intent(this, Mote.class);
-			PendingIntent pendingIntent = PendingIntent.getBroadcast(this.getApplicationContext(), 1253, intent, PendingIntent.FLAG_UPDATE_CURRENT| Intent.FILL_IN_DATA);
-			
-			AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-			
-			alarmManager.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pendingIntent);
-			Toast.makeText(this, "Alarm worked.", Toast.LENGTH_LONG).show();
-			//this is where notification edits end
 	}
 
 	@Override

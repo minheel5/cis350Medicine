@@ -14,9 +14,11 @@ public class Mote extends BroadcastReceiver {
 	
 	@SuppressLint("NewApi")
 	public void onReceive(Context context, Intent intent) {
+		Database db = Database.getInstance();
 		Toast.makeText(context, "Alarm worked.", Toast.LENGTH_LONG).show();
 		int icon = R.drawable.avatar1;
-		CharSequence tickerText = "Hello you have to take medicine";
+		//CharSequence tickerText = "Hello you have to take medicine";
+		CharSequence tickerText = db.message;
 		long when = System.currentTimeMillis();
 		
 		CharSequence contentTitle = "My notification";
