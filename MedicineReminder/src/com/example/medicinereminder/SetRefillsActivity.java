@@ -38,9 +38,6 @@ public class SetRefillsActivity extends Activity {
 		public void onRefillContinueButtonClick(View view){
 			Intent i = new Intent(this, Avatar.class);
 			startActivityForResult(i, Avatar_ID);
-			data.refillYear = year;
-			data.refillMonth = month;
-			data.refillDay = day;
 		}
 		
 		// display current date
@@ -81,6 +78,9 @@ public class SetRefillsActivity extends Activity {
 			 
 						// set selected date into datepicker also
 						dpResult2.init(year, month, day, null);
+						data.refillYear = year;
+						data.refillMonth = month;
+						data.refillDay = day;
 			 
 					}
 				};
