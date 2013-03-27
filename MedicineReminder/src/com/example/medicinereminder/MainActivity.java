@@ -1,16 +1,11 @@
 package com.example.medicinereminder;
 
-import java.util.Calendar;
-
 import android.os.Bundle;
 import android.app.Activity;
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.view.Menu;
 import android.view.View;
-import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
@@ -20,23 +15,6 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
 			setContentView(R.layout.activity_main);
-			
-			Database database = Database.getInstance();
-			
-			//this is where notification edits begin
-			Calendar cal = Calendar.getInstance();
-			cal.set(Calendar.HOUR_OF_DAY, database.medicationTime1.getHour());
-			cal.set(Calendar.MINUTE, database.medicationTime1.getMinute());
-			cal.set(Calendar.SECOND, 05);
-			
-			Intent intent = new Intent(this, Mote.class);
-			PendingIntent pendingIntent = PendingIntent.getBroadcast(this.getApplicationContext(), 1253, intent, PendingIntent.FLAG_UPDATE_CURRENT| Intent.FILL_IN_DATA);
-			
-			AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-			
-			alarmManager.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pendingIntent);
-			Toast.makeText(this, "Alarm worked.", Toast.LENGTH_LONG).show();
-			//this is where notification edits end
 	}
 
 	@Override
