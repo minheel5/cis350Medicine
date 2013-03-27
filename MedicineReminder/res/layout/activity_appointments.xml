@@ -1,55 +1,35 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:orientation="vertical"
     tools:context=".Appointments" >
 
-    <LinearLayout android:orientation="horizontal"
-        android:layout_width="fill_parent"
-  	  	android:layout_height="wrap_content"
-    > 
+   
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="When is your next appointment(s)?" />
+        android:text="When is your next appointment?" />
     
-    <Button android:id="@+id/plus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="+"
-        android:onClick="onPlusButtonClick" 
-        />
-    
-    </LinearLayout>
-    
-    <Button android:id="@+id/pickDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="4dip"
-            android:text="pick date"/> 
-    
-    <Button android:id="@+id/clear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Clear"
-        android:onClick="onClearButtonClick" 
-        />
-    
-     <LinearLayout
+    <DatePicker
+        android:id="@+id/dpResult"
         android:layout_width="match_parent"
         android:layout_height="0dip"
-        android:layout_weight="1"
-        android:gravity="center|bottom"
-        android:orientation="vertical" >
-         
+        android:layout_weight=".33"
+	 />
+            
+    <TimePicker
+        android:id="@+id/timePicker2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    
+     
     <Button android:id="@+id/horicalendar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Appointment Calendar"
-        android:layout_gravity="center_horizontal|center"
         android:onClick="onCalButtonClick" 
         />
     
@@ -58,9 +38,6 @@
         android:layout_height="wrap_content"
         android:text="Continue"
         android:onClick="onAContinueButtonClick"
-        android:layout_gravity="center_horizontal|center"
         />
     
-    </LinearLayout>
-
 </LinearLayout>
