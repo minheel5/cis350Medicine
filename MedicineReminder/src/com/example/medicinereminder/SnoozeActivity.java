@@ -43,6 +43,8 @@ public class SnoozeActivity extends Activity {
 			return;
 		}
 		
+		data.snoozeTime = mins;
+		
 		Database database = Database.getInstance();
 		Calendar cal = Calendar.getInstance();
 		cal.set(Calendar.HOUR_OF_DAY, database.medicationTime1.getHour());
@@ -56,9 +58,6 @@ public class SnoozeActivity extends Activity {
 		
 		alarmManager.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pendingIntent);
 		//Toast.makeText(this, "Alarm worked.", Toast.LENGTH_LONG).show();
-		
-		data.snoozeTime = mins;
-		
 		
 		Intent i = new Intent(this, TakeOption.class);
 		startActivityForResult(i, TakeOption_ID);
