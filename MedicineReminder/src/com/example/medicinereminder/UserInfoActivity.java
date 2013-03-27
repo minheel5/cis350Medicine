@@ -49,18 +49,22 @@ public class UserInfoActivity extends Activity {
 		EditText e3 = (EditText)findViewById(R.id.editText3);
 		dateOfDiagnosis = e3.getText().toString();
 		Log.i("Info", dateOfDiagnosis);
+		data.dateOfDiagnosis = dateOfDiagnosis;
 		
 		EditText e4 = (EditText)findViewById(R.id.editText4);
 		viralLoad = e4.getText().toString();
 		Log.i("Info", viralLoad);
+		data.viralLoad = viralLoad;
 		
 		EditText e5 = (EditText)findViewById(R.id.editText5);
 		phone = e5.getText().toString();
 		Log.i("Info", phone);
+		data.phone = phone;
 		
 		EditText e6 = (EditText)findViewById(R.id.editText6);
 		providerPhone = e6.getText().toString();
 		Log.i("Info", providerPhone);
+		data.providerPhone = providerPhone;
 		
 		if (first_name.equals("")){
 			new AlertDialog.Builder(this).setTitle("Error").setMessage("You cannot leave any fields blank").setNeutralButton("close",null).show();
