@@ -37,6 +37,7 @@
 	<string name="providerPhone">Provider\'s Phone Number</string>
 	<string name="conti">Continue</string>
 	<string name="info">Enter Your Information:</string>
+	<string name="med">Enter Medication Here</string>
 	
     
 </resources>
