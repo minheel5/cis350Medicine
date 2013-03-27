@@ -44,7 +44,7 @@ public class MedicationActivity extends Activity {
 		EditText e3 = (EditText)findViewById(R.id.editText3);
 		medication[2] = e3.getText().toString();
 		Log.i("Info", medication[2]);
-		data.medication3 = medication[3];
+		data.medication3 = medication[2];
 		
 		if (medication[0].equals("") && medication[1].equals("") && medication[2].equals("")){
 			new AlertDialog.Builder(this).setTitle("Error").setMessage("Please enter a medication").setNeutralButton("close",null).show();
