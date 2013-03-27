@@ -1,29 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical">
-<TextView
-android:id="@+id/textView1"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:text="@string/whatmeds"
-android:textAppearance="?android:attr/textAppearanceMedium" />
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-<<<<<<< HEAD
-<EditText
-android:id="@+id/editText1"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:ems="10"
-android:hint="@string/med" />
-<EditText
-android:id="@+id/editText2"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:hint="@string/med"
-android:ems="10" />
-=======
    
 
     <TextView
@@ -79,34 +59,5 @@ android:ems="10" />
          android:text="@string/conti" 
          android:onClick="onMContinueButtonClick"
          />
->>>>>>> iss53
 
-<EditText
-android:id="@+id/editText3"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:hint="@string/med"
-android:ems="10" />
-<TextView
-android:id="@+id/textView2"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="@string/whenmeds"
-android:textAppearance="?android:attr/textAppearanceMedium" />
-<TimePicker
-android:id="@+id/timePicker1"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content" />
-<TimePicker
-android:id="@+id/timePicker2"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content" />
-<Button
-android:id="@+id/button1"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:layout_marginTop="100dp"
-android:text="@string/conti" 
-android:onClick="onMContinueButtonClick"
-/>
 </LinearLayout>
