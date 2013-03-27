@@ -1,36 +1,34 @@
 package com.example.medicinereminder;
 
+import static org.junit.Assert.*;
 
-import com.example.medicinereminder.R;
-import com.example.medicinereminder.SetRefillsActivity;
+import org.junit.Test;
 
-import android.test.ActivityInstrumentationTestCase2;
-import android.widget.DatePicker;
 
-public class SetRefillsTest extends ActivityInstrumentationTestCase2<SetRefillsActivity> {
+public class SetRefillsTest {
 	
-	private String first_name = "";
-	private String last_name = "";
-
+	private Database data = Database.getInstance();
+	private int year = 0;
+	private int month = 0;
+	private int day = 0;
+	
 	public SetRefillsTest(String name) {
-		super(SetRefillsActivity.class);
+		super();
 	}
 
 	protected void setUp() throws Exception {
-		super.setUp();
-		SetRefillsActivity info = getActivity();
-		DatePicker dpResult2 = (DatePicker) info.findViewById(R.id.dpResult2);
-		
-		
+		day = data.appointmentsDay;
+		month = data.appointmentsMonth;
+		year = data.appointmentsYear;
 	}
 	
-	public void testDater(){
-		assertEquals(first_name, "Minhee");
+	@Test
+	public void testDate(){
+		assertEquals(day, 04);
+		assertEquals(month, 04);
+		assertEquals(year, 2013);
 	}
 	
-	public void testHour(){
-		assertEquals(last_name, "Lee");
-	}
 	
 	
 

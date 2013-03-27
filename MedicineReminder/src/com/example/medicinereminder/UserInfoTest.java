@@ -1,12 +1,10 @@
 package com.example.medicinereminder;
 
-import com.example.medicinereminder.R;
-import com.example.medicinereminder.UserInfoActivity;
+import static org.junit.Assert.*;
 
-import android.test.ActivityInstrumentationTestCase2;
-import android.widget.EditText;
+import org.junit.Test;
 
-public class UserInfoTest extends ActivityInstrumentationTestCase2<UserInfoActivity> {
+public class UserInfoTest {
 	
 	private String first_name = "";
 	private String last_name = "";
@@ -14,56 +12,44 @@ public class UserInfoTest extends ActivityInstrumentationTestCase2<UserInfoActiv
 	private String viralLoad = "";
 	private String phone = "";
 	private String providerPhone = "";
+	private Database data = Database.getInstance();
 
 	public UserInfoTest(String name) {
-		super(UserInfoActivity.class);
+		super();
 	}
 
 	protected void setUp() throws Exception {
-		super.setUp();
-		UserInfoActivity info = getActivity();
-		EditText e1 = (EditText)info.findViewById(R.id.editText1);
-		first_name = e1.getText().toString();
-		
-		EditText e2 = (EditText)info.findViewById(R.id.editText2);
-		last_name = e2.getText().toString();
-		
-		EditText e3 = (EditText)info.findViewById(R.id.editText3);
-		dateOfDiagnosis = e3.getText().toString();
-		
-		EditText e4 = (EditText)info.findViewById(R.id.editText4);
-		viralLoad = e4.getText().toString();
-		
-		EditText e5 = (EditText)info.findViewById(R.id.editText5);
-		phone = e5.getText().toString();
-		
-		EditText e6 = (EditText)info.findViewById(R.id.editText6);
-		providerPhone = e6.getText().toString();
+		first_name = data.firstName;
+		last_name = data.lastName;
+		dateOfDiagnosis = data.dateOfDiagnosis;
+		viralLoad = data.viralLoad;
+		phone = data.phone;
+		providerPhone = data.providerPhone;
 		
 	}
-	
+	@Test
 	public void testFirstName(){
-		assertEquals(first_name, "Minhee");
+		assertEquals(first_name, "John");
 	}
-	
+	@Test
 	public void testLastName(){
-		assertEquals(last_name, "Lee");
+		assertEquals(last_name, "Brown");
 	}
-	
+	@Test
 	public void testDate(){
-		assertEquals(dateOfDiagnosis, "2/27/13");
+		assertEquals(dateOfDiagnosis, "03/27/13");
 	}
-	
+	@Test
 	public void testViralLoad(){
-		assertEquals(viralLoad, "100");
+		assertEquals(viralLoad, "10000");
 	}
-	
+	@Test
 	public void testPhone(){
-		assertEquals(phone, "215-588-7785");
+		assertEquals(phone, "2155887785");
 	}
-	
+	@Test
 	public void testProviderPhone(){
-		assertEquals(providerPhone, "267-709-4301");
+		assertEquals(providerPhone, "2157677281");
 	}
 	
 

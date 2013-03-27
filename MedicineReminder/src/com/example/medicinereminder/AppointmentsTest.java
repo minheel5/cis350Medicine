@@ -26,14 +26,15 @@ public class AppointmentsTest {
 	
 	@Test
 	public void testDate(){
-		assertEquals(day, 0);
-		assertEquals(month, 0);
-		assertEquals(year, 0);
+		assertEquals(day, 01);
+		assertEquals(month, 04);
+		assertEquals(year, 2013);
 	}
 	
 	@Test
 	public void testHour(){
-		assertEquals(time, null);
+		assertEquals(time.getHour(), 11);
+		assertEquals(time.getMinute(), 0);
 	}
 	
 	

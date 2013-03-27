@@ -20,7 +20,7 @@ public class SetReminderTest {
 	
 	@Test
 	public void testMedications(){
-		assertEquals(message, "");
+		assertEquals(message, "Take your meds.");
 	}
 	
 	

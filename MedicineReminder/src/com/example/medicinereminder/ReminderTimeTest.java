@@ -20,7 +20,7 @@ public class ReminderTimeTest {
 	
 	@Test
 	public void testMedications(){
-		assertEquals(mins, 0);
+		assertEquals(mins, 5);
 	}
 	
 	

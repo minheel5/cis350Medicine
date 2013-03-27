@@ -1,36 +1,26 @@
 package com.example.medicinereminder;
 
-import com.example.medicinereminder.R;
-import com.example.medicinereminder.SnoozeActivity;
+import static org.junit.Assert.*;
 
-import android.test.ActivityInstrumentationTestCase2;
-import android.widget.DatePicker;
-import android.widget.TimePicker;
+import org.junit.Test;
 
-public class SnoozeTest extends ActivityInstrumentationTestCase2<SnoozeActivity> {
+
+public class SnoozeTest {
 	
-	private String first_name = "";
-	private String last_name = "";
-
+	private Database data = Database.getInstance();
+	private int mins = 0;
+	
 	public SnoozeTest(String name) {
-		super(SnoozeActivity.class);
+		super();
 	}
 
 	protected void setUp() throws Exception {
-		super.setUp();
-		SnoozeActivity info = getActivity();
-		DatePicker dpResult = (DatePicker) info.findViewById(R.id.dpResult);
-		TimePicker timePicker2 = (TimePicker) info.findViewById(R.id.timePicker2);
-		
-		
+		mins = data.snoozeTime;
 	}
 	
-	public void testDater(){
-		assertEquals(first_name, "Minhee");
-	}
-	
-	public void testHour(){
-		assertEquals(last_name, "Lee");
+	@Test
+	public void testMedications(){
+		assertEquals(mins, 5);
 	}
 	
 	

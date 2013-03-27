@@ -28,15 +28,15 @@ public class MedicationTest {
 	
 	@Test
 	public void testMedications(){
-		assertEquals(medication1, "");
+		assertEquals(medication1, "advil");
 		assertEquals(medication2, "");
 		assertEquals(medication3, "");
 	}
 	
 	@Test
 	public void testMedicationTime(){
-		assertEquals(time1, null);
-		assertEquals(time2, null);
+		assertEquals(time1.getHour(), 8);
+		assertEquals(time1.getMinute(), 30);
 	}
 	
 	
