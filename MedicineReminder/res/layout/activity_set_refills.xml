@@ -13,29 +13,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="When is your next refill" />
+        android:text="When is your next refill?" />
     
-    <Button android:id="@+id/plus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="+"
-        android:onClick="onPlusButtonClick" 
-        />
-    
+ 
     </LinearLayout>
     
-    <Spinner
-	    android:id="@+id/time"
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content" />
+    <DatePicker
+        android:id="@+id/dpResult2"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight=".7"
+	 />
     
-    <Button android:id="@+id/clear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Clear"
-        android:onClick="onClearButtonClick" 
-        />
     
      <LinearLayout
         android:layout_width="match_parent"
