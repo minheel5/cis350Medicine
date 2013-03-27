@@ -47,7 +47,7 @@ public class AppointmentsActivity extends Activity {
 		AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
 		
 		alarmManager.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pendingIntent);
-		Toast.makeText(this, "Alarm worked.", Toast.LENGTH_LONG).show();
+		//Toast.makeText(this, "Alarm worked.", Toast.LENGTH_LONG).show();
 		//this is where notification edits end
         
 	}

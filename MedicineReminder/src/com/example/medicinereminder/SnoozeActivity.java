@@ -1,13 +1,18 @@
 package com.example.medicinereminder;
 
+import java.util.Calendar;
+
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlarmManager;
 import android.app.AlertDialog;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class SnoozeActivity extends Activity {
 	
@@ -37,6 +42,20 @@ public class SnoozeActivity extends Activity {
 			new AlertDialog.Builder(this).setTitle("Error").setMessage("Please enter a number").setNeutralButton("close",null).show();
 			return;
 		}
+		
+		Database database = Database.getInstance();
+		Calendar cal = Calendar.getInstance();
+		cal.set(Calendar.HOUR_OF_DAY, database.medicationTime1.getHour());
+		cal.set(Calendar.MINUTE, database.medicationTime1.getMinute() + database.snoozeTime);
+		cal.set(Calendar.SECOND, 05);
+		
+		Intent intent = new Intent(this, Mote.class);
+		intent.putExtra("Message", database.message);
+		PendingIntent pendingIntent = PendingIntent.getBroadcast(this.getApplicationContext(), 1253, intent, PendingIntent.FLAG_UPDATE_CURRENT| Intent.FILL_IN_DATA);
+		AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+		
+		alarmManager.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pendingIntent);
+		//Toast.makeText(this, "Alarm worked.", Toast.LENGTH_LONG).show();
 		
 		data.snoozeTime = mins;
 		
