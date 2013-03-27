@@ -54,12 +54,12 @@ public class MedicationActivity extends Activity {
 		TimePicker d1 = (TimePicker)findViewById(R.id.timePicker1);
 		time[0] = new Time(d1.getCurrentHour(),d1.getCurrentMinute());
 		Log.i("Info", time[0].toString());
-		data.time1 = time[0];
+		data.medicationTime1 = time[0];
 		
 		TimePicker d2 = (TimePicker)findViewById(R.id.timePicker1);
 		time[1] = new Time(d2.getCurrentHour(),d2.getCurrentMinute());
 		Log.i("Info", time[1].toString());
-		data.time2 = time[1];
+		data.medicationTime2 = time[1];
 		
 		
 		Intent i = new Intent(this, ReminderTimeActivity.class);

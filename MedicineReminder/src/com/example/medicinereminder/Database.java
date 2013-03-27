@@ -12,8 +12,13 @@ public class Database {
 	protected String medication1 = "";
 	protected String medication2 = "";
 	protected String medication3 = "";
-	protected Time time1 = null;
-	protected Time time2 = null;
+	protected Time medicationTime1 = null;
+	protected Time medicationTime2 = null;
+	protected String message = "";
+	protected int appointmentsYear = 0;
+	protected int appointmentsMonth = 0;
+	protected int appointmentsDay = 0;
+	protected Time appointmentsTime = null;
 	
 	private Database(){
 		
