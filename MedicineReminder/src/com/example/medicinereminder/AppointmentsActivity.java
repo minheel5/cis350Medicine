@@ -17,6 +17,7 @@ import android.widget.Toast;
 public class AppointmentsActivity extends Activity {
 	
 	public static final int SetRefillsActivity_ID= 1;
+	public static CharSequence MESSAGE = "";
 	private DatePicker dpResult;
  
 	private int year;
@@ -40,6 +41,7 @@ public class AppointmentsActivity extends Activity {
 		cal.set(Calendar.HOUR_OF_DAY, database.medicationTime1.getHour());
 		cal.set(Calendar.MINUTE, database.medicationTime1.getMinute());
 		cal.set(Calendar.SECOND, 05);
+		MESSAGE = database.message;
 		
 		Intent intent = new Intent(this, Mote.class);
 		PendingIntent pendingIntent = PendingIntent.getBroadcast(this.getApplicationContext(), 1253, intent, PendingIntent.FLAG_UPDATE_CURRENT| Intent.FILL_IN_DATA);

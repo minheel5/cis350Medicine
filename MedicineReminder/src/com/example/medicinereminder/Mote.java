@@ -17,8 +17,8 @@ public class Mote extends BroadcastReceiver {
 		Database db = Database.getInstance();
 		Toast.makeText(context, "Alarm worked.", Toast.LENGTH_LONG).show();
 		int icon = R.drawable.avatar1;
-		//CharSequence tickerText = "Time to take your medication!";
-		String tickerText = db.message;
+		CharSequence tickerText = "Time to take your medication!";
+		//CharSequence tickerText = MESSAGE;
 		long when = System.currentTimeMillis();
 		
 		CharSequence contentTitle = "My notification";
