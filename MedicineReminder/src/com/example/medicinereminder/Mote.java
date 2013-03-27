@@ -27,7 +27,7 @@ public class Mote extends BroadcastReceiver {
 		final int NOTIF_ID = 1234;
 		NotificationManager notofManager = (NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
 		
-		Intent notificationIntent = new Intent(context, MainActivity.class);
+		Intent notificationIntent = new Intent(context, TakeOption.class);
 		PendingIntent contentIntent = PendingIntent.getActivity(context, 0, notificationIntent, 0);
 		Notification notification = new Notification(icon, tickerText, when);
 		
