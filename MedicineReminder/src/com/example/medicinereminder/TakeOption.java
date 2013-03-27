@@ -9,6 +9,8 @@ import android.view.View;
 
 public class TakeOption extends Activity {
 	public static final int ReminderTimeActivity2_ID = 1;
+	public static final int HomeScreen_ID = 1;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -20,6 +22,11 @@ public class TakeOption extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.activity_take_option, menu);
 		return true;
+	}
+	
+	public void onHomeButtonClick(View view){
+		Intent i = new Intent(this, HomeScreen.class);
+		startActivityForResult(i, HomeScreen_ID);
 	}
 	
 	public void onTookButtonClick(View view){
