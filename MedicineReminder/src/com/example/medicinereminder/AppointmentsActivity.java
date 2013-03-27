@@ -44,6 +44,9 @@ public class AppointmentsActivity extends Activity {
 		TimePicker d1 = (TimePicker)findViewById(R.id.timePicker1);
 		time = new Time(d1.getCurrentHour(),d1.getCurrentMinute());
 		data.appointmentsTime = time;
+		data.appointmentsYear = year;
+		data.appointmentsMonth = month;
+		data.appointmentsDay = day;
 	}
 	
 	// display current date
@@ -84,9 +87,6 @@ public class AppointmentsActivity extends Activity {
 	 
 				// set selected date into datepicker also
 				dpResult.init(year, month, day, null);
-				data.appointmentsYear = year;
-				data.appointmentsMonth = month;
-				data.appointmentsDay = day;
 	 
 			}
 		};

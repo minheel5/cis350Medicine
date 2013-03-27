@@ -20,6 +20,7 @@ public class SetRefillsActivity extends Activity {
 		private int day;
 	 
 		static final int DATE_DIALOG_ID = 999;
+		private Database data = Database.getInstance();
 		
 		@Override
 		protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,9 @@ public class SetRefillsActivity extends Activity {
 		public void onRefillContinueButtonClick(View view){
 			Intent i = new Intent(this, Avatar.class);
 			startActivityForResult(i, Avatar_ID);
+			data.refillYear = year;
+			data.refillMonth = month;
+			data.refillDay = day;
 		}
 		
 		// display current date
