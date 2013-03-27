@@ -1,5 +1,7 @@
 package com.example.medicinereminder;
 
+import java.util.Calendar;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +19,8 @@ public class HomeScreen extends Activity {
 	private String firstname;
 	private String lastname;
 	TextView welcome;
+	TextView appointment;
+	TextView refill;
 	ImageView avatar;
 	private int avatarnumber;
 	
@@ -49,7 +53,10 @@ public class HomeScreen extends Activity {
 			avatar.setImageDrawable(getResources().getDrawable(R.drawable.avatar8));
 		else if (avatarnumber == 9)
 			avatar.setImageDrawable(getResources().getDrawable(R.drawable.avatar9));
-		
+		appointment = (TextView)findViewById(R.id.textView6);
+		refill = (TextView)findViewById(R.id.textView7);
+		Calendar c = Calendar.getInstance();
+		c.getTime();
 	}
 
 	@Override
