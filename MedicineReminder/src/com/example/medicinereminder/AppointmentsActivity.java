@@ -112,5 +112,9 @@ public class AppointmentsActivity extends Activity {
 	 
 			}
 		};
+<<<<<<< HEAD
 		
+=======
+	
+>>>>>>> b6f8748b49b862aa33e709856bc3bf7fa01b685b
 }
