@@ -55,14 +55,9 @@
          android:id="@+id/button1"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
-<<<<<<< HEAD
          android:layout_marginTop="100dp"
          android:text="@string/conti" 
          android:onClick="onMContinueButtonClick"
          />
-=======
-         android:onClick="onMContinueButtonClick"
-         android:text="@string/conti" />
->>>>>>> cc87cd856522bc688567e3a220ce1d0e5adb666b
 
 </LinearLayout>
