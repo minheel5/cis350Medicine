@@ -8,7 +8,8 @@ import android.view.Menu;
 import android.view.View;
 import java.util.Calendar;
 import android.app.DatePickerDialog;
-import android.widget.DatePicker; ;
+import android.widget.DatePicker; 
+import android.widget.TimePicker;
 
 public class AppointmentsActivity extends Activity {
 	
@@ -18,6 +19,8 @@ public class AppointmentsActivity extends Activity {
 	private int year;
 	private int month;
 	private int day;
+	private Database data = Database.getInstance();
+	private Time time = null;
  
 	static final int DATE_DIALOG_ID = 999;
 	
@@ -38,6 +41,9 @@ public class AppointmentsActivity extends Activity {
 	public void onAContinueButtonClick(View view){
 		Intent i = new Intent(this, SetRefillsActivity.class);
 		startActivityForResult(i, SetRefillsActivity_ID);
+		TimePicker d1 = (TimePicker)findViewById(R.id.timePicker1);
+		time = new Time(d1.getCurrentHour(),d1.getCurrentMinute());
+		data.appointmentsTime = time;
 	}
 	
 	// display current date
@@ -78,6 +84,9 @@ public class AppointmentsActivity extends Activity {
 	 
 				// set selected date into datepicker also
 				dpResult.init(year, month, day, null);
+				data.appointmentsYear = year;
+				data.appointmentsMonth = month;
+				data.appointmentsDay = day;
 	 
 			}
 		};

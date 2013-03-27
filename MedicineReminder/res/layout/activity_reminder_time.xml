@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical" >
@@ -9,25 +9,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="29dp"
-        android:layout_x="1dp"
-        android:layout_y="24dp"
         android:text="@string/remindertime"
         android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="@string/minutes"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
 
     <Button
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_x="5dp"
-        android:layout_y="359dp"
-        android:text="Continue"
-        android:onClick="onRContinueButtonClick" />
+        android:layout_marginTop="50dp"
+        android:onClick="onRContinueButtonClick"
+        android:text="@string/conti" />
 
-    <TimePicker
-        android:id="@+id/timePicker1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_x="1dp"
-        android:layout_y="134dp" />
-
-</AbsoluteLayout>
+</LinearLayout>

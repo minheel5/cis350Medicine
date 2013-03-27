@@ -32,15 +32,7 @@
         android:layout_weight="1"
         android:gravity="center|bottom"
         android:orientation="vertical" >
-         
-    <Button android:id="@+id/apptcalendar"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Refill Calendar"
-        android:layout_gravity="center_horizontal|center"
-        android:onClick="onCalButtonClick" 
-        />
-    
+ 
     <Button android:id="@+id/cont"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

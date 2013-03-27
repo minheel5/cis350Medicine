@@ -27,7 +27,7 @@
 	<string name="nottaken">Not Taken</string>
 	<string name="snooze">Snooze</string>
 	<string name="pillcam">PillCam</string>
-	<string name="remindertime">What time do you want to be reminded?</string>
+	<string name="remindertime">How many minutes before would you like to be reminded?</string>
 	<string name="snooze2">How long do you want to snooze for?</string>
 	<string name="firstName">First Name</string>
 	<string name="lastName">Last Name</string>
@@ -38,6 +38,7 @@
 	<string name="conti">Continue</string>
 	<string name="info">Enter Your Information:</string>
 	<string name="med">Enter Medication Here</string>
+	<string name="minutes">Enter Minutes Here</string>
 	
     
 </resources>
