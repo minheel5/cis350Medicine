@@ -19,7 +19,6 @@ import android.widget.Toast;
 public class ReminderTimeActivity extends Activity {
 	public static int SetReminderActivity_ID = 1;
 	private int mins = 0;
-	private Database data = Database.getInstance();
 	
 	
 	@Override
@@ -47,7 +46,6 @@ public class ReminderTimeActivity extends Activity {
 		}
 		
 		Log.i("Info", String.valueOf(mins));
-		data.mins = mins;
 		
 		Intent i = new Intent(this, SetReminderActivity.class);
 		startActivityForResult(i, SetReminderActivity_ID);
