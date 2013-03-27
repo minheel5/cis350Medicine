@@ -21,11 +21,12 @@ public class MainActivity extends Activity {
 			super.onCreate(savedInstanceState);
 			setContentView(R.layout.activity_main);
 			
+			Database database = Database.getInstance();
 			
 			//this is where notification edits begin
 			Calendar cal = Calendar.getInstance();
-			cal.set(Calendar.HOUR_OF_DAY, 5);
-			cal.set(Calendar.MINUTE, 19);
+			cal.set(Calendar.HOUR_OF_DAY, database.medicationTime1.getHour());
+			cal.set(Calendar.MINUTE, database.medicationTime1.getMinute());
 			cal.set(Calendar.SECOND, 05);
 			
 			Intent intent = new Intent(this, Mote.class);
