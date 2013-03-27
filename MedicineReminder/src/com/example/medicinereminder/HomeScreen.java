@@ -55,8 +55,8 @@ public class HomeScreen extends Activity {
 			avatar.setImageDrawable(getResources().getDrawable(R.drawable.avatar9));
 		appointment = (TextView)findViewById(R.id.textView6);
 		refill = (TextView)findViewById(R.id.textView7);
-		Calendar c = Calendar.getInstance();
-		c.getTime();
+		appointment.setText(data.appointmentsMonth + "/" + data.appointmentsDay + "/" + data.appointmentsYear);
+		refill.setText(data.refillMonth + "/" + data.refillDay + "/" + data.refillYear);
 	}
 
 	@Override
