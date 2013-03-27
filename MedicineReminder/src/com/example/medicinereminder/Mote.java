@@ -17,8 +17,8 @@ public class Mote extends BroadcastReceiver {
 		Database db = Database.getInstance();
 		Toast.makeText(context, "Alarm worked.", Toast.LENGTH_LONG).show();
 		int icon = R.drawable.avatar1;
-		CharSequence tickerText = "Time to take your medication!";
-		//CharSequence tickerText = db.message;
+		//CharSequence tickerText = "Time to take your medication!";
+		String tickerText = db.message;
 		long when = System.currentTimeMillis();
 		
 		CharSequence contentTitle = "My notification";
@@ -29,6 +29,7 @@ public class Mote extends BroadcastReceiver {
 		
 		Intent notificationIntent = new Intent(context, TakeOption.class);
 		PendingIntent contentIntent = PendingIntent.getActivity(context, 0, notificationIntent, 0);
+		@SuppressWarnings("deprecation")
 		Notification notification = new Notification(icon, tickerText, when);
 		
 		notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);

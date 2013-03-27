@@ -32,7 +32,7 @@ public class SetReminderActivity extends Activity {
 		EditText e1 = (EditText)findViewById(R.id.message);
 		mes = e1.getText().toString();
 		Log.i("Info", mes);
-		data.message = mes;
+		data.message = mes.toString();
 		
 		if (mes.equals("")){
 			new AlertDialog.Builder(this).setTitle("Error").setMessage("Please enter a reminder message").setNeutralButton("close",null).show();
