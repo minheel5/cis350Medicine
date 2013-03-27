@@ -59,6 +59,8 @@ public class AppointmentsActivity extends Activity {
 		return true;
 	}
 	
+<<<<<<< HEAD
+=======
 	public void onAContinueButtonClick(View view){
 		TimePicker d1 = (TimePicker)findViewById(R.id.timePicker2);
 		time = new Time(d1.getCurrentHour(),d1.getCurrentMinute());
@@ -70,6 +72,7 @@ public class AppointmentsActivity extends Activity {
 		startActivityForResult(i, SetRefillsActivity_ID);
 		
 	}
+>>>>>>> 85355fef255b1c14cffcb8ca257f38829ac9ba11
 	
 	// display current date
 		public void setCurrentDateOnView() {
@@ -113,5 +116,15 @@ public class AppointmentsActivity extends Activity {
 			}
 		};
 		
+		public void onAContinueButtonClick(View view){
+			Intent i = new Intent(this, SetRefillsActivity.class);
+			startActivityForResult(i, SetRefillsActivity_ID);
+			TimePicker d1 = (TimePicker)findViewById(R.id.timePicker1);
+			time = new Time(d1.getCurrentHour(),d1.getCurrentMinute());
+			data.appointmentsTime = time;
+			data.appointmentsYear = year;
+			data.appointmentsMonth = month;
+			data.appointmentsDay = day;
+		}
 	
 }
