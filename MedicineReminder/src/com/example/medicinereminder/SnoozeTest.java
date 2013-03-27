@@ -22,7 +22,6 @@ public class SnoozeTest {
 	public void testMedications(){
 		assertEquals(mins, 5);
 	}
-	
-	
+
 
 }
