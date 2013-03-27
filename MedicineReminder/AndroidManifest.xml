@@ -32,6 +32,7 @@
         <activity android:name="com.example.medicinereminder.TakeOption"/>
         <activity android:name="com.example.medicinereminder.Avatar"/>
         <activity android:name="com.example.medicinereminder.Tutorial"/>
+        <receiver android:process=":remote" android:name=".Mote"></receiver>
     </application>
 
 </manifest>
