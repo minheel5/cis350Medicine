@@ -60,11 +60,11 @@ public class AppointmentsActivity extends Activity {
 	}
 	
 	public void onAContinueButtonClick(View view){
-		TimePicker d1 = (TimePicker)findViewById(R.id.timePicker2);
-		time = new Time(d1.getCurrentHour(),d1.getCurrentMinute());
-		data.appointmentsTime = time;
 		Intent i = new Intent(this, SetRefillsActivity.class);
 		startActivityForResult(i, SetRefillsActivity_ID);
+		data.appointmentsYear = dpResult.getYear();
+		data.appointmentsMonth = dpResult.getMonth();
+		data.appointmentsDay = dpResult.getDayOfMonth();
 		
 	}
 	
@@ -106,9 +106,6 @@ public class AppointmentsActivity extends Activity {
 	 
 				// set selected date into datepicker also
 				dpResult.init(year, month, day, null);
-				data.appointmentsYear = selectedYear;
-				data.appointmentsMonth = selectedMonth;
-				data.appointmentsDay = selectedDay;
 	 
 			}
 		};
