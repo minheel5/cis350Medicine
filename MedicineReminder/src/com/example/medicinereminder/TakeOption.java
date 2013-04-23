@@ -5,6 +5,7 @@ import java.io.File;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentValues;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -40,14 +41,43 @@ public class TakeOption extends Activity {
 	}
 	
 	public void onTookButtonClick(View view){
+		data.notTakenCount = 0;
+		data.takenCount += 1;
 		new AlertDialog.Builder(this).setTitle("Good Job :)").setMessage("Keep it up!").setNeutralButton("close",null).show();
 		
 		
 	}
 	
 	public void onNotTakenButtonClick(View view){
-		new AlertDialog.Builder(this).setTitle("Ok..:(").setMessage("You will do better next time.").setNeutralButton("close",null).show();
-		
+		data.notTakenCount += 1;
+		data.takenCount = 0;
+		if(data.notTakenCount >= 3){
+			AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+			alertDialogBuilder.setTitle("Are you ok?");
+			alertDialogBuilder.setMessage("You have not taken your medication more than 3 times in a row. " +
+					"Would you like to call your provider?");
+			alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+	            public void onClick(DialogInterface dialog, int which) {
+	                // TODO Auto-generated method stub
+	                Intent callIntent = new Intent(Intent.ACTION_CALL);
+	                String providerPhone  = "tel:" + data.providerPhone; 
+	            	callIntent.setData(Uri.parse(providerPhone));
+	            	startActivity(callIntent);
+	            }
+	        });
+			alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+	            public void onClick(DialogInterface dialog, int which) {
+	                // TODO Auto-generated method stub
+	                Toast.makeText(getApplicationContext(), 
+	                    "Ok.. :( Please call your provider as soon as possible.",Toast.LENGTH_LONG)
+	                    .show();
+	            }
+	        });
+			alertDialogBuilder.show();
+		}
+		else{
+			new AlertDialog.Builder(this).setTitle("Ok..:(").setMessage("You will do better next time.").setNeutralButton("close",null).show();
+		}
 		
 	}
 	

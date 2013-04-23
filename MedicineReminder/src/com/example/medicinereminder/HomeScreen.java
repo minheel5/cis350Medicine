@@ -21,6 +21,7 @@ public class HomeScreen extends Activity {
 	TextView welcome;
 	TextView appointment;
 	TextView refill;
+	TextView mediStreaks;
 	ImageView avatar;
 	private int avatarnumber;
 	
@@ -53,10 +54,13 @@ public class HomeScreen extends Activity {
 			avatar.setImageDrawable(getResources().getDrawable(R.drawable.avatar8));
 		else if (avatarnumber == 9)
 			avatar.setImageDrawable(getResources().getDrawable(R.drawable.avatar9));
+		
 		appointment = (TextView)findViewById(R.id.textView6);
 		refill = (TextView)findViewById(R.id.textView7);
 		appointment.setText(data.appointmentsMonth + "/" + data.appointmentsDay + "/" + data.appointmentsYear);
 		refill.setText(data.refillMonth + "/" + data.refillDay + "/" + data.refillYear);
+		mediStreaks = (TextView)findViewById(R.id.mediStreaks);
+		mediStreaks.setText("Medi Streaks: " + data.takenCount);
 	}
 
 	@Override
@@ -71,8 +75,6 @@ public class HomeScreen extends Activity {
 		startActivityForResult(i, UserInfoActivity_ID);
 	}
 	
-	public void onCheckProgressClick(View view){
-	}
 	
 	public void onTakeMedsClick(View view){
 		Intent i = new Intent(this, TakeOption.class);

@@ -36,9 +36,10 @@ public class SetRefillsActivity extends Activity {
 		}
 		
 		public void onRefillContinueButtonClick(View view){
-			data.refillYear = year;
-			data.refillMonth = month;
-			data.refillDay = day;
+			dpResult2 = (DatePicker) findViewById(R.id.dpResult2);
+			data.refillYear = dpResult2.getYear();
+			data.refillMonth = dpResult2.getMonth();
+			data.refillDay = dpResult2.getDayOfMonth();
 			Intent i = new Intent(this, Avatar.class);
 			startActivityForResult(i, Avatar_ID);
 		}

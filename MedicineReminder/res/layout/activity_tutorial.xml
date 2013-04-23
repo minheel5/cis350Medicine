@@ -61,14 +61,6 @@
 	        android:layout_gravity="center_horizontal|center"
 	        android:onClick="onTTMContinueButtonClick" 
 	        />
-	    
-	    <Button android:id="@+id/chekcprogress"
-	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
-	        android:text="Check Progress"
-	        android:layout_gravity="center_horizontal|center"
-	        
-	        />
     
 	</LinearLayout>
 </LinearLayout>
