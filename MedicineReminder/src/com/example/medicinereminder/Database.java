@@ -16,9 +16,9 @@ public class Database {
 	protected Time medicationTime1 = null;
 	protected Time medicationTime2 = null;
 	protected String message = "";
-	protected int appointmentsYear = 0;
-	protected int appointmentsMonth = 0;
-	protected int appointmentsDay = 0;
+	protected int appointmentsYear = 100;
+	protected int appointmentsMonth = 100;
+	protected int appointmentsDay = 100;
 	protected Time appointmentsTime = null;
 	protected int refillYear = 0;
 	protected int refillMonth = 0;

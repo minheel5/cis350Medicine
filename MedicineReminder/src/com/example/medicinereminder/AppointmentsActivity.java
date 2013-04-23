@@ -23,7 +23,6 @@ public class AppointmentsActivity extends Activity {
 	private int month;
 	private int day;
 	private Database data = Database.getInstance();
-	private Time time = null;
  
 	static final int DATE_DIALOG_ID = 999;
 	
@@ -60,11 +59,11 @@ public class AppointmentsActivity extends Activity {
 	}
 	
 	public void onAContinueButtonClick(View view){
+		data.appointmentsYear = year;
+		data.appointmentsMonth = month;
+		data.appointmentsDay = day;
 		Intent i = new Intent(this, SetRefillsActivity.class);
 		startActivityForResult(i, SetRefillsActivity_ID);
-		data.appointmentsYear = dpResult.getYear();
-		data.appointmentsMonth = dpResult.getMonth();
-		data.appointmentsDay = dpResult.getDayOfMonth();
 		
 	}
 	
@@ -80,6 +79,9 @@ public class AppointmentsActivity extends Activity {
 	 
 			// set current date into datepicker
 			dpResult.init(year, month, day, null);
+			data.appointmentsYear = year;
+			data.appointmentsMonth = month;
+			data.appointmentsDay = day;
 	 
 		}
 		 
@@ -88,6 +90,9 @@ public class AppointmentsActivity extends Activity {
 			switch (id) {
 			case DATE_DIALOG_ID:
 			   // set date picker as current date
+				data.appointmentsYear = year;
+				data.appointmentsMonth = month;
+				data.appointmentsDay = day;
 			   return new DatePickerDialog(this, datePickerListener, 
 	                         year, month,day);
 			}
@@ -106,6 +111,13 @@ public class AppointmentsActivity extends Activity {
 	 
 				// set selected date into datepicker also
 				dpResult.init(year, month, day, null);
+				data.appointmentsYear = year;
+				data.appointmentsMonth = month;
+				data.appointmentsDay = day;
+				
+				data.appointmentsYear = dpResult.getYear();
+				data.appointmentsMonth = dpResult.getMonth();
+				data.appointmentsDay = dpResult.getDayOfMonth();
 	 
 			}
 		};
