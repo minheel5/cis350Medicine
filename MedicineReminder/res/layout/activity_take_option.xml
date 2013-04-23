@@ -63,6 +63,7 @@
         android:layout_below="@+id/button1"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"
+        android:onClick="onPillCamButtonClick"
         android:src="@drawable/pill_cam" />
 
     <TextView
