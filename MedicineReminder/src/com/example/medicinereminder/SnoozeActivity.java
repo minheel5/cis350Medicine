@@ -53,7 +53,9 @@ public class SnoozeActivity extends Activity {
 		
 		Intent intent = new Intent(this, Mote.class);
 		intent.putExtra("Message", database.message);
-		PendingIntent pendingIntent = PendingIntent.getBroadcast(this.getApplicationContext(), 1253, intent, PendingIntent.FLAG_UPDATE_CURRENT| Intent.FILL_IN_DATA);
+		//PendingIntent pendingIntent = PendingIntent.getBroadcast(this.getApplicationContext(), 1253, intent, PendingIntent.FLAG_UPDATE_CURRENT| Intent.FILL_IN_DATA);
+		PendingIntent pendingIntent = PendingIntent.getActivity(this.getApplicationContext(), 0, 
+				new Intent(this.getApplicationContext(), AlarmActivity.class),0);
 		AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
 		
 		alarmManager.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pendingIntent);

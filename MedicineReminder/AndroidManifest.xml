@@ -36,6 +36,7 @@
         <activity android:name="com.example.medicinereminder.Tutorial"/>
         <activity android:name="com.example.medicinereminder.HomeScreen"/>
         <activity android:name="com.example.medicinereminder.SnoozeActivity"/>
+        <activity android:name="com.example.medicinereminder.AlarmActivity"/>
         <receiver android:process=":remote" android:name=".Mote"></receiver>
     </application>
 
