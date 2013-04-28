@@ -27,8 +27,6 @@ public class AlarmActivity extends Activity {
 		 setContentView(R.layout.alarm_page);
 		 TextView out = (TextView)findViewById(R.id.alarmMessage);
 		 out.append(database.message);
-
-		 //Spinner spinner = (Spinner) findViewById(R.id.editSleep);
 	 }
 
 

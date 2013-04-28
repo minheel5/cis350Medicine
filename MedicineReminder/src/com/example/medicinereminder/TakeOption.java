@@ -88,16 +88,6 @@ public class TakeOption extends Activity {
 	}
 	
 	public void onPillCamButtonClick(View view){
-	/*	String fileName = "new-photo-name.jpg";
-		ContentValues values = new ContentValues();
-		values.put(MediaStore.Images.Media.TITLE, fileName);
-		values.put(MediaStore.Images.Media.DESCRIPTION,"Image capture by camera");
-		imageUri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
-		Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-		intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
-		intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1);
-		startActivityForResult(intent, CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE);
-	*/
 		
 		Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 		File file = new File(Environment.getExternalStorageDirectory(), "test.jpg");
